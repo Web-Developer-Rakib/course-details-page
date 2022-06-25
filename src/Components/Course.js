@@ -1,3 +1,7 @@
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faShare, faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Course = ({ pageInfo }) => {
   const {
     title,
@@ -21,16 +25,74 @@ const Course = ({ pageInfo }) => {
               {teachersName}
             </h4>
           </div>
-          <div className="">
-            <p className="text-gray-500">{teachersReviews}</p>
+          <div className="mt-5">
+            <span>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+            </span>
+            <span className="text-gray-500 ml-2">{teachersReviews}</span>
+          </div>
+          <div className="mt-1">
+            <span>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+              <FontAwesomeIcon
+                className="text-yellow-500"
+                icon={faStar}
+              ></FontAwesomeIcon>
+            </span>
+            <span className="text-gray-500 ml-2">{classReviews}</span>
           </div>
           <h4 className="text-xl font-semibold">{completedLearners}</h4>
           <div className="flex">
-            <button className="p-4 bg-primary rounded-3xl text-white font-bold text-xl">
+            <button className="p-4 bg-primary rounded-full text-white font-bold text-xl">
               See Class Schedule
             </button>
-            <button className="p-4 text-primary font-bold text-xl">Save</button>
             <button className="p-4 text-primary font-bold text-xl">
+              {" "}
+              <FontAwesomeIcon
+                className="mr-2"
+                icon={faHeart}
+              ></FontAwesomeIcon>
+              Save
+            </button>
+            <button className="p-4 text-primary font-bold text-xl">
+              <FontAwesomeIcon
+                className="mr-2"
+                icon={faShare}
+              ></FontAwesomeIcon>
               Share
             </button>
           </div>

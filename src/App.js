@@ -3,7 +3,7 @@ import "./App.css";
 import Course from "./Components/Course";
 
 function App() {
-  const [pageInfos, setPageInfos] = useState();
+  const [pageInfos, setPageInfos] = useState([]);
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
