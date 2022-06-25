@@ -1,5 +1,9 @@
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faShare, faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faShare,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Course = ({ pageInfo }) => {
@@ -11,17 +15,20 @@ const Course = ({ pageInfo }) => {
     teachersReviews,
     classReviews,
     completedLearners,
+    courseImg,
   } = pageInfo;
   return (
-    <div className=" pl-5 pr-30 pt-5">
+    <div className=" pl-1 pr-1 lg:pl-5 lg:pr-30 pt-5">
       <h1 className="text-5xl font-bold">{title}</h1>
-      <h3 className="text-2xl font-semibold text-gray-500">{subTitle}</h3>
-      <div className="mt-20">
+      <h3 className="text-2xl font-semibold text-gray-500 mt-1">{subTitle}</h3>
+      <div className="mt-20 flex justify-around flex-wrap-reverse lg:flex-nowrap">
         <div>
-          <p>{desc}</p>
+          <p className="lg:mr-60 w-full lg:w-[500px] font-semibold mt-5 lg:mt-0">
+            {desc}
+          </p>
           <div>
             {" "}
-            <h4 className="text-xl text-primary font-semibold">
+            <h4 className="text-xl text-primary font-semibold mt-5">
               {teachersName}
             </h4>
           </div>
@@ -75,10 +82,11 @@ const Course = ({ pageInfo }) => {
             </span>
             <span className="text-gray-500 ml-2">{classReviews}</span>
           </div>
-          <h4 className="text-xl font-semibold">{completedLearners}</h4>
-          <div className="flex">
+          <h4 className="text-xl font-semibold mt-3">{completedLearners}</h4>
+          <div className="flex mt-8">
             <button className="p-4 bg-primary rounded-full text-white font-bold text-xl">
-              See Class Schedule
+              See Class Schedule{" "}
+              <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
             </button>
             <button className="p-4 text-primary font-bold text-xl">
               {" "}
@@ -97,7 +105,9 @@ const Course = ({ pageInfo }) => {
             </button>
           </div>
         </div>
-        <div></div>
+        <div className="lg:pr-20 flex justify-center">
+          <img src={courseImg} className="rounded-xl" alt="" width={1200} />
+        </div>
       </div>
     </div>
   );
