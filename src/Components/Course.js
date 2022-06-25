@@ -1,22 +1,41 @@
-const Course = () => {
+const Course = ({ pageInfo }) => {
+  const {
+    title,
+    subTitle,
+    desc,
+    teachersName,
+    teachersReviews,
+    classReviews,
+    completedLearners,
+  } = pageInfo;
   return (
-    <div>
-      <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <img
-            src="https://api.lorem.space/image/movie?w=260&h=400"
-            class="max-w-sm rounded-lg shadow-2xl"
-          />
+    <div className=" pl-5 pr-30 pt-5">
+      <h1 className="text-5xl font-bold">{title}</h1>
+      <h3 className="text-2xl font-semibold text-gray-500">{subTitle}</h3>
+      <div className="mt-20">
+        <div>
+          <p>{desc}</p>
           <div>
-            <h1 class="text-5xl font-bold">Box Office News!</h1>
-            <p class="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button class="btn btn-primary">Get Started</button>
+            {" "}
+            <h4 className="text-xl text-primary font-semibold">
+              {teachersName}
+            </h4>
+          </div>
+          <div className="">
+            <p className="text-gray-500">{teachersReviews}</p>
+          </div>
+          <h4 className="text-xl font-semibold">{completedLearners}</h4>
+          <div className="flex">
+            <button className="p-4 bg-primary rounded-3xl text-white font-bold text-xl">
+              See Class Schedule
+            </button>
+            <button className="p-4 text-primary font-bold text-xl">Save</button>
+            <button className="p-4 text-primary font-bold text-xl">
+              Share
+            </button>
           </div>
         </div>
+        <div></div>
       </div>
     </div>
   );
