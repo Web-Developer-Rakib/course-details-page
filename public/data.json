@@ -7,6 +7,7 @@
     "teachersReviews": "567 total reviews for this teacher",
     "classReviews": "5 reviews for this class",
     "completedLearners": "Completed by 21 learners",
+    "teachersImg": "./Images/teacher.jfif",
     "courseImg": "./Images/course-img.PNG"
   }
 ]
