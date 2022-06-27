@@ -38,7 +38,7 @@ const Course = ({ pageInfo }) => {
               src={teachersImg}
               className="rounded-full mr-2"
               alt=""
-              width={40}
+              width={30}
             />
             <h4 className="text-xl text-primary font-semibold">
               {teachersName}
@@ -95,7 +95,7 @@ const Course = ({ pageInfo }) => {
             <span className="text-gray-500 ml-2">{classReviews}</span>
           </div>
           <h4 className="text-xl font-semibold mt-3">{completedLearners}</h4>
-          <div className="flex mt-8">
+          <div className="flex mt-8 mb-5">
             <button className="p-4 bg-primary rounded-full text-white font-bold text-xl">
               See Class Schedule{" "}
               <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
